@@ -28,10 +28,10 @@ var yMax = d3.max(data, function(d) {
 var xScale = d3.scaleLinear()
                .domain([xMin, xMax])
                .range([padding, width - padding]);
-
+ 
 var yScale = d3.scaleLinear()
                .domain([yMin, yMax])
-               .range([ padding, height - padding]); // [height, 0] - flips it - inverse
+               .range([ height - padding, padding ]); // [0, height] - flips it - inverse
 
 var colorScale = d3.scaleLinear()
                   .domain([0,1])
