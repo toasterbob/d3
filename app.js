@@ -69,11 +69,11 @@ svg.selectAll('circle')
 
   svg.append('g')
      .attr("class","x-axis")
-     .attr("transform", "translate(0," + (height - padding) + ")")
+     .attr("transform", "translate(5," + (height - padding) + ")")
      .call(d3.axisBottom(xScale));
 
  svg.append('g')
-    .attr("transform", "translate(" + padding + ",0)")
+    .attr("transform", "translate(" + (padding + 5)+ ",0)")
     .call(d3.axisLeft(yScale));
 
 
