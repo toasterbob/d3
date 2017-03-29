@@ -64,7 +64,7 @@ svg.selectAll('circle')
   })
 
   .on('mouseout', (d) => {
-    tooltip.style("opacity", 1);
+    tooltip.style("opacity", 0);
   })
 
 
