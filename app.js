@@ -67,7 +67,14 @@ svg.selectAll('circle')
     tooltip.style("opacity", 0);
   })
 
-
+  svg.append('g')
+     .attr("class","x-axis")
+     .attr("transform", "translate(0," + (height - padding.top) + ")")
+     .call(d3.axisBottom(xScale));
+     
+ svg.append('g')
+    .attr("transform", "translate(" + padding.left + ",0)")
+    .call(d3.axisLeft(yScale));
 // var quotes = [{
 // 	quote: "Go ahead, make my day.",
 // 	color: "red",
