@@ -28,7 +28,7 @@ var yMax = d3.max(data, function(d) {
 var xScale = d3.scaleLinear()
                .domain([xMin, xMax])
                .range([padding, width - padding]);
- 
+
 var yScale = d3.scaleLinear()
                .domain([yMin, yMax])
                .range([ height - padding, padding ]); // [0, height] - flips it - inverse
@@ -53,7 +53,7 @@ svg.selectAll('circle')
   .attr('fill', function(d) {
     return colorScale(d.freshness);
   })
-  .on('mouseover', function(d) {
+  .on('mouseover', (d) => {
     console.log(d);
     console.log(d3.event.screenX,
                 d3.event.screenY);
@@ -61,6 +61,10 @@ svg.selectAll('circle')
            .style("opacity", 1)
            .style("left", d3.event.pageX + "px")
            .style("top", d3.event.pageY + "px");
+  })
+
+  .on('mouseout', (d) => {
+    tooltip.style("opacity", 1);
   })
 
 
