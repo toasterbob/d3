@@ -7,7 +7,7 @@ var svg = d3.select("svg")
 // var data = [[250, 250], [0, 0], [100, 150], [400, 200], [700, 250], [5000, 400]];
 var data = movies;
 
-var padding = 20
+var padding = 20;
 
 var xMin = d3.min(data, function(d) {
   return d.daysOpen;
@@ -53,7 +53,7 @@ svg.selectAll('circle')
   .attr('fill', function(d) {
     return colorScale(d.freshness);
   })
-  .on('mouseover', (d) => {
+  .on('mouseenter', (d) => {
     console.log(d);
     console.log(d3.event.screenX,
                 d3.event.screenY);
@@ -71,7 +71,7 @@ svg.selectAll('circle')
      .attr("class","x-axis")
      .attr("transform", "translate(0," + (height - padding.top) + ")")
      .call(d3.axisBottom(xScale));
-     
+
  svg.append('g')
     .attr("transform", "translate(" + padding.left + ",0)")
     .call(d3.axisLeft(yScale));
