@@ -33,5 +33,6 @@ d3.select("body")
     return d.color;
   })
   .style("font-size", function(d){
-    return d.size + "px";
+    // return d.size + "px";
+    return Math.round((Math.random() * 40)) + 30 + "px";
   })
