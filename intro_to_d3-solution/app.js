@@ -84,7 +84,7 @@ svg.append('g')
 
 d3.select("select").on("change", function() {
   var scaleType;
-  newVal = d3.select("select").property("value");
+  let newVal = d3.select("select").property("value");
   xMin = d3.min(movies, function(d) {
     return d[newVal];
   });
