@@ -77,7 +77,7 @@ svg.append('g')
    .attr("class","x-axis")
    .attr("transform", "translate(0," + (height - padding.top) + ")")
    .call(d3.axisBottom(xScale));
-
+ 
 svg.append('g')
    .attr("transform", "translate(" + padding.left + ",0)")
    .call(d3.axisLeft(yScale));
@@ -98,7 +98,7 @@ d3.select("select").on("change", function() {
   }
   xScale = scaleType().domain([xMin,xMax])
                     .range([padding.left,width - padding.right]);
- 
+
   var t = d3.transition()
                      .duration(1000)
                      .ease(d3.easeBounceOut);
@@ -108,7 +108,7 @@ d3.select("select").on("change", function() {
     .attr('cx', function(d) {
       return xScale(d[newVal]);
     });
-  
+
   d3.selectAll('.x-axis')
     .transition(t)
     .call(d3.axisBottom(xScale));
