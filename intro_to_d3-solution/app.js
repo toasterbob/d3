@@ -77,7 +77,7 @@ svg.append('g')
    .attr("class","x-axis")
    .attr("transform", "translate(0," + (height - padding.top) + ")")
    .call(d3.axisBottom(xScale));
- 
+
 svg.append('g')
    .attr("transform", "translate(" + padding.left + ",0)")
    .call(d3.axisLeft(yScale));
@@ -112,5 +112,7 @@ d3.select("select").on("change", function() {
   d3.selectAll('.x-axis')
     .transition(t)
     .call(d3.axisBottom(xScale));
+
+
 
 });
