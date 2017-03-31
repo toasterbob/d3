@@ -77,13 +77,13 @@ svg.append('g')
   .attr("transform", "translate(" + (padding + 5)+ ",0)")
   .call(d3.axisLeft(yScale));
 
-d3.select("select").on("change", function() {
-  var scaleType;
+d3.select("select").on("change", () => {
+  let scaleType;
   let newVal = d3.select("select").property("value"); //daysOpen, maxTheaters, release
-  xMin = d3.min(movies, function(d) {
+  xMin = d3.min(movies, (d) => {
     return d[newVal];
   });
-  xMax = d3.max(movies, function(d) {
+  xMax = d3.max(movies, (d) => {
     return d[newVal];
   });
   if (newVal === "release") {
@@ -94,20 +94,18 @@ d3.select("select").on("change", function() {
   xScale = scaleType().domain([xMin, xMax])
                       .range([padding, width - padding]);
 
-  var t = d3.transition()
+  let t = d3.transition()
             .duration(1000)
             .ease(d3.easeBounceOut);
   //
   d3.selectAll('circle')
     .transition(t)
-    .attr('cx', function(d) {
+    .attr('cx', (d) => {
       return xScale(d[newVal]);
     });
 
   d3.selectAll('.x-axis')
     .transition(t)
     .call(d3.axisBottom(xScale));
-
-
 
 });
