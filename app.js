@@ -43,6 +43,7 @@ let tooltip = d3.select("body")
                 .style("opacity",0)
                 .style("position","absolute");
 
+
 svg.selectAll('circle')
   .data(data)
   .enter()
