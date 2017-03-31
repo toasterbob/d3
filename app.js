@@ -5,11 +5,11 @@ let svg = d3.select("svg")
             .attr("height", height);
 
 // var data = [[250, 250], [0, 0], [100, 150], [400, 200], [700, 250], [5000, 400]];
-var data = movies;
+let data = movies;
 
-var padding = 20;
+let padding = 20;
 
-var xMin = d3.min(data, function(d) {
+let xMin = d3.min(data, (d) => {
   return d.daysOpen;
 });
 
