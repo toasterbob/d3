@@ -33,11 +33,11 @@ let yScale = d3.scaleLinear()
                .domain([yMin, yMax])
                .range([ height - padding, padding ]); // [0, height] - flips it - inverse
 
-var colorScale = d3.scaleLinear()
+let colorScale = d3.scaleLinear()
                   .domain([0,1])
                   .range(['red', 'green']);
 
-var tooltip = d3.select("body")
+let tooltip = d3.select("body")
                 .append("div")
                 .attr("class", "tooltip")
                 .style("opacity",0)
@@ -47,10 +47,10 @@ svg.selectAll('circle')
   .data(data)
   .enter()
   .append('circle')
-  .attr('cx', function(d) { return xScale(d.daysOpen); })
-  .attr('cy', function(d) { return yScale(d.total); })
-  .attr('r', function(d) { return 5 * d.total / d.openingTotal; })
-  .attr('fill', function(d) {
+  .attr('cx', (d) => { return xScale(d.daysOpen); })
+  .attr('cy', (d) => { return yScale(d.total); })
+  .attr('r', (d) => { return 5 * d.total / d.openingTotal; })
+  .attr('fill', (d) => {
     return colorScale(d.freshness);
   })
   .on('mouseenter', (d) => {
