@@ -102,11 +102,11 @@ d3.select("select").on("change", function() {
     .attr('cx', function(d) {
       return xScale(d[newVal]);
     });  
-  //
-  // d3.selectAll('.x-axis')
-  //   .transition(t)
-  //   .call(d3.axisBottom(xScale));
-  //
-  //
+
+  d3.selectAll('.x-axis')
+    .transition(t)
+    .call(d3.axisBottom(xScale));
+
+
 
 });
