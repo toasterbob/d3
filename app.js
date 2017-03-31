@@ -13,7 +13,7 @@ let xMin = d3.min(data, (d) => {
   return d.daysOpen;
 });
 
-var xMax = d3.max(data, function(d) {
+let xMax = d3.max(data, (d) => {
   return d.daysOpen;
 });
 
