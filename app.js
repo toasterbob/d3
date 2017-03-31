@@ -59,6 +59,7 @@ svg.selectAll('circle')
                 d3.event.screenY);
     tooltip.text(d.title)
            .style("opacity", 1)
+           .style("background", "beige")
            .style("left", d3.event.pageX + "px")
            .style("top", d3.event.pageY + "px");
   })
