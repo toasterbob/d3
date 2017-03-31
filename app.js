@@ -77,7 +77,7 @@ svg.append('g')
   .call(d3.axisLeft(yScale));
 
 d3.select("select").on("change", function() {
-  var scaleType;
+  var scaleType; 
   let newVal = d3.select("select").property("value"); //daysOpen, maxTheaters, release
   xMin = d3.min(movies, function(d) {
     return d[newVal];
