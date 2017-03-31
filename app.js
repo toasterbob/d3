@@ -101,7 +101,7 @@ d3.select("select").on("change", function() {
     .transition(t)
     .attr('cx', function(d) {
       return xScale(d[newVal]);
-    });
+    }); 
   //
   // d3.selectAll('.x-axis')
   //   .transition(t)
