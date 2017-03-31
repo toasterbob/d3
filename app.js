@@ -93,9 +93,9 @@ d3.select("select").on("change", function() {
   xScale = scaleType().domain([xMin,xMax])
                     .range([padding,width - padding]);
 
-  // var t = d3.transition()
-  //                    .duration(1000)
-  //                    .ease(d3.easeBounceOut);
+  var t = d3.transition()
+                     .duration(1000)
+                     .ease(d3.easeBounceOut);
   //
   // d3.selectAll('circle')
   //   .transition(t)
