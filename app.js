@@ -17,19 +17,19 @@ let xMax = d3.max(data, (d) => {
   return d.daysOpen;
 });
 
-var yMin = d3.min(data, function(d) {
+let yMin = d3.min(data, (d) => {
   return d.total;
 });
 
-var yMax = d3.max(data, function(d) {
+let yMax = d3.max(data, (d) => {
   return d.total;
 });
 
-var xScale = d3.scaleLinear()
+let xScale = d3.scaleLinear()
                .domain([xMin, xMax])
                .range([padding, width - padding]);
 
-var yScale = d3.scaleLinear()
+let yScale = d3.scaleLinear()
                .domain([yMin, yMax])
                .range([ height - padding, padding ]); // [0, height] - flips it - inverse
 
