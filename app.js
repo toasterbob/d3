@@ -90,9 +90,9 @@ d3.select("select").on("change", function() {
   } else {
     scaleType = d3.scaleLinear;
   }
-  // xScale = scaleType().domain([xMin,xMax])
-  //                   .range([padding.left,width - padding.right]);
-  //
+  xScale = scaleType().domain([xMin,xMax])
+                    .range([padding.left,width - padding.right]);
+  
   // var t = d3.transition()
   //                    .duration(1000)
   //                    .ease(d3.easeBounceOut);
