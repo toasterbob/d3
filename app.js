@@ -99,9 +99,9 @@ d3.select("select").on("change", function() {
   //
   d3.selectAll('circle')
     .transition(t)
-  //   .attr('cx', function(d) {
-  //     return xScale(d[newVal]);
-  //   });
+    .attr('cx', function(d) {
+      return xScale(d[newVal]);
+    });
   //
   // d3.selectAll('.x-axis')
   //   .transition(t)
