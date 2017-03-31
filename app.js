@@ -90,8 +90,8 @@ d3.select("select").on("change", function() {
   } else {
     scaleType = d3.scaleLinear;
   }
-  xScale = scaleType().domain([xMin,xMax])
-                      .range([padding,width - padding]);
+  xScale = scaleType().domain([xMin, xMax])
+                      .range([padding, width - padding]);
 
   var t = d3.transition()
             .duration(1000)
@@ -101,7 +101,7 @@ d3.select("select").on("change", function() {
     .transition(t)
     .attr('cx', function(d) {
       return xScale(d[newVal]);
-    });  
+    });
 
   d3.selectAll('.x-axis')
     .transition(t)
