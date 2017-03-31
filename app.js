@@ -98,7 +98,7 @@ d3.select("select").on("change", function() {
             .ease(d3.easeBounceOut);
   //
   d3.selectAll('circle')
-  //   .transition(t)
+    .transition(t)
   //   .attr('cx', function(d) {
   //     return xScale(d[newVal]);
   //   });
